@@ -1,0 +1,19 @@
+.nav {
+  background-color: rgba(123, 32, 207, 0.979);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 70px;
+  padding: 0px 80px;
+}
+.nav p {
+  font-size: 30px;
+  margin: 0px 0px;
+}
+
+.navItems a {
+  color: white;
+  text-decoration: none;
+  padding-right: 10px;
+}

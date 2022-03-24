@@ -1,0 +1,37 @@
+.itemContainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 3px;
+  /* padding-left: 7px;
+  padding-right: 7px; */
+  padding: 5px 0px 5px 5px;
+}
+
+.itemContainer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.itemName {
+  font-size: 20px;
+  margin: 0px 0px 0px 15px;
+}
+.itemQuantity {
+  font-size: 20px;
+  margin: 0px 0px 0px auto;
+}
+.itemBtn {
+  margin: 3px 10px 0px 8px;
+  border: 0;
+  color: white;
+  background-color: rgba(123, 32, 207, 0.979);
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.itemBtn:hover {
+  color: orange;
+}

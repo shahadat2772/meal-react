@@ -1,0 +1,34 @@
+.mealCard img {
+  height: 286px;
+  width: 286px;
+  border-radius: 8px;
+  margin: 8px 7px 0px 7px;
+}
+
+.mealCard {
+  /* height: 510px; */
+  width: 300px;
+  border: 2px solid rgba(122, 32, 207, 0.671);
+  border-radius: 8px;
+  padding-bottom: 10px;
+  background-color: rgba(137, 43, 226, 0.192);
+}
+
+.cardInfo {
+  margin: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addBtn {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 0;
+  background-color: rgba(123, 32, 207, 0.979);
+  border-radius: 5px;
+  color: white;
+}
+
+.addBtn:hover {
+  color: orange;
+}

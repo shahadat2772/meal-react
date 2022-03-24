@@ -10,7 +10,7 @@ const Shop = () => {
   const [meals, setMeals] = useState([]);
   // SETTING CART
   const [cart, setCart] = useState([]);
-  console.log(cart);
+  // console.log(cart);
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=a")

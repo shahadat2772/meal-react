@@ -40,20 +40,24 @@ const Shop = () => {
   // HANDLE ADD TO CART BTN
 
   const addToCart = (selectedMeal) => {
-    let newCart = [];
-    const exists = cart.find((meal) => meal.idMeal === selectedMeal.idMeal);
-    if (exists) {
-      exists.quantity = exists.quantity + 1;
-      const rest = cart.filter((meal) => meal.idMeal !== exists.idMeal);
-      newCart = [...rest, exists];
-      // console.log("matched", exists);
-    } else {
-      selectedMeal["quantity"] = 1;
-      newCart = [...cart, selectedMeal];
+    if (cart.length < 4) {
+      let newCart = [];
+      const exists = cart.find((meal) => meal.idMeal === selectedMeal.idMeal);
+      if (exists) {
+        exists.quantity = exists.quantity + 1;
+        const rest = cart.filter((meal) => meal.idMeal !== exists.idMeal);
+        newCart = [...rest, exists];
+        // console.log("matched", exists);
+      } else {
+        selectedMeal["quantity"] = 1;
+        newCart = [...cart, selectedMeal];
+      }
+      addToDb(selectedMeal.idMeal);
+      setCart(newCart);
       // console.log("not matched", selectedMeal);
+    } else {
+      alert("Slow down turbo, four items at a time!");
     }
-    addToDb(selectedMeal.idMeal);
-    setCart(newCart);
   };
   // Delete item from ADDED meals
   const deleteItem = (id) => {
@@ -67,6 +71,7 @@ const Shop = () => {
   return (
     <div className="shopContainer">
       {/* Meals Container */}
+
       <div className="mealsContainer">
         {meals.map((meal) => (
           <Meal addToCart={addToCart} key={meal.idMeal} meal={meal}></Meal>
